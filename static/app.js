@@ -32,22 +32,22 @@ const updateSelectedExperience = (selectedUl) => {
   // 선택된 체험에 따라 href 및 내용 속성 변경
   switch (selectedUl.id) {
     case "experience_0":
-      selectedExperience.href = "./image_classification.html";
+      selectedExperience.href = "./image_classification";
       selectedExperience.content =
         "100개의 카테고리로 분류되는 이미지를 추론하는 AI를 체험해 봅시다.";
       break;
     case "experience_1":
-      selectedExperience.href = "./object_detection.html";
+      selectedExperience.href = "./object_detection";
       selectedExperience.content =
         "웹 캠을 활용하여 실시간으로 객체를 인식하는 AI를 체험해 봅시다.";
       break;
     case "experience_2":
-      selectedExperience.href = "./pose_detection.html";
+      selectedExperience.href = "./pose_detection";
       selectedExperience.content =
         "웹 캠을 활용하여 실시간으로 객체의 포즈를 인식하는 AI를 체험해 봅시다.";
       break;
     case "experience_3":
-      selectedExperience.href = "./style_change.html";
+      selectedExperience.href = "./style_change";
       selectedExperience.content =
         "웹 캠을 활용하여 실시간으로 스타일이 변환되는 AI를 체험해 봅시다.";
       break;
