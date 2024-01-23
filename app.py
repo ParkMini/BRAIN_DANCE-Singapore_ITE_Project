@@ -32,5 +32,6 @@ def selectAI():
 def style_change():
     return render_template('style_change.html')
 
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
