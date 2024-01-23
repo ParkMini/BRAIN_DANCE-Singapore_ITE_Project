@@ -1,5 +1,5 @@
 let video = document.querySelector("#cam");
-let canvas = document.querySelector("#canvas");
+let canvas = document.querySelector(".canvas");
 let context = canvas.getContext("2d");
 let webcam = false;
 const SERVER_URL = "https://localhost:80";

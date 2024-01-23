@@ -24,16 +24,16 @@
         <div class="section">
             <h2>Select AI</h2>
                 <div class="contains">
-                    <button type="button" id="{modelId}" onclick="changeModel(this.id)" class="btn col-1 btn-primary">1.</button>
-                    <button type="button" id="{modelId}" onclick="changeModel(this.id)" class="btn col-1 btn-dark">2.</button>
-                    <button type="button" id="{modelId}" onclick="changeModel(this.id)" class="btn col-1 btn-dark">2.</button>
-                    <button type="button" id="{modelId}" onclick="changeModel(this.id)" class="btn col-1 btn-dark">4.</button>
-                    <button type="button" id="{modelId}" onclick="changeModel(this.id)" class="btn col-1 btn-dark">5.</button>
-                    <button type="button" id="{modelId}" onclick="changeModel(this.id)" class="btn col-1 btn-dark">6.</button>
+                    <button type="button" id="Object_Detection" onclick="changeModel(this.id)" class="btn col-1 btn-primary">1.</button>
+                    <button type="button" id="Pose_Estimation" onclick="changeModel(this.id)" class="btn col-1 btn-dark">2.</button>
+                    <button type="button" id="Style_Transfer" onclick="changeModel(this.id)" class="btn col-1 btn-dark">2.</button>
+                    <button type="button" id="OCR" onclick="changeModel(this.id)" class="btn col-1 btn-dark">4.</button>
+                    <!-- <button type="button" id="{modelId}" onclick="changeModel(this.id)" class="btn col-1 btn-dark">5.</button> -->
+                    <!-- <button type="button" id="{modelId}" onclick="changeModel(this.id)" class="btn col-1 btn-dark">6.</button> -->
                 </div>
         </div>
         <div class="section">
-            <h2 id="selectedModel">{Selected Model Result}</h2>
+            <h2 id="selectedModel">Object_Detection</h2>
             <canvas class="canvas"></canvas>
         </div>
     </div>
