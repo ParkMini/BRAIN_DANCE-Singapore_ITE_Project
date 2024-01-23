@@ -53,3 +53,10 @@ function dataURLtoFile(dataurl, filename) {
 setInterval(captureFrame, 200); // 예: 5초마다 실행
 
 // HTML onClick 이벤트에서 getVideoStream 호출
+
+
+async function changeModel(id) {
+    let h2 = document.getElementById("selectedModel");
+    h2.innerText = id;
+    captureFrame(id);
+}

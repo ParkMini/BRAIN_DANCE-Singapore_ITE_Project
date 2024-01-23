@@ -1,0 +1,41 @@
+/* Global CSS */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('./fonts/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#cam {
+    width: 70%;
+    height: auto;
+    margin: 10px 15%;
+}
+
+.section {
+    border: 1px solid rgb(172, 168, 168);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.contains {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.canvas {
+    width: 70%;
+    height: auto;
+    margin: 10px 15%;
+}
