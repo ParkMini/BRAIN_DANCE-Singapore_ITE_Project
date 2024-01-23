@@ -4,6 +4,7 @@ let context = canvas.getContext('2d');
 let webcam = false
 let SERVER_URL = "https://localhost:80";
 
+// HTTP GET REQUEST
 function getRequest(url) {
     return new Promise((resolve, reject) => {
         const request = new XMLHttpRequest();
@@ -25,6 +26,7 @@ function getRequest(url) {
     });
 }
 
+// HTTP POST REQUEST
 const postRequest = (url, file) => {
     const request = new XMLHttpRequest();
     const formData = new FormData();
@@ -33,11 +35,13 @@ const postRequest = (url, file) => {
     request.send(formData);
 }
 
+// WEBCAM SETTING
 const constraints = {
     video: true,  // 비디오 사용 여부
     audio: false  // 오디오 사용 여부
 };
 
+// GET WEBCAM
 function getVideoStream() {
     navigator.mediaDevices.getUserMedia(constraints)
       .then(function(stream) {
@@ -50,8 +54,10 @@ function getVideoStream() {
       });
 }
 
+// SITE IS LOADED
 document.addEventListener('DOMContentLoaded', getVideoStream);
 
+// CAPTUREFRAME AND SENDBACKEND SERVER
 async function captureFrame() {
     if(webcam) {
         let id = "Object Detection";
@@ -74,6 +80,11 @@ async function captureFrame() {
     }
 }
 
+// CAPTUREFRAME AND SENDBACKEND SERVER
+/**
+ * 
+ * @param {*} id 
+ */
 async function captureFrame(id) {
     if(webcam) {
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -95,6 +106,7 @@ async function captureFrame(id) {
     }
 }
 
+// IMG URL TO FILE OBJECT
 function dataURLtoFile(dataurl, filename) {
     let arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
         bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
@@ -104,11 +116,9 @@ function dataURLtoFile(dataurl, filename) {
     return new File([u8arr], filename, {type:mime});
 }
 
-setInterval(captureFrame, 200); // 예: 5초마다 실행
+setInterval(captureFrame, 200);
 
-// HTML onClick 이벤트에서 getVideoStream 호출
-
-
+// CHANGE MODEL FUNCTION
 async function changeModel(id) {
     let h2 = document.getElementById("selectedModel");
     h2.innerText = id;
