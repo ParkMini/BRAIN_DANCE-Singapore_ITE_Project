@@ -2,7 +2,7 @@ let video = document.querySelector("#cam");
 let canvas = document.querySelector('.canvas');
 let context = canvas.getContext('2d');
 let webcam = false
-let SERVER_URL = "https://{host}:{port}";
+let SERVER_URL = "https://localhost:80";
 
 function getRequest(url) {
     return new Promise((resolve, reject) => {
@@ -63,6 +63,10 @@ async function captureFrame() {
         .then(response => {
             // debug code
             console.log(response)
+            
+            // setInterval(() => {
+            //     canvas.srcObcject = response;
+            // }, 200)
         })
         .then(e => {
             console.err("has error:", e)
@@ -80,6 +84,10 @@ async function captureFrame(id) {
         .then(response => {
             // debug code
             console.log(response)
+
+            // setInterval(() => {
+            //     canvas.srcObcject = response;
+            // }, 200)
         })
         .then(e => {
             console.err("has error:", e)
