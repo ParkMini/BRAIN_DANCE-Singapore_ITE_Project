@@ -32,6 +32,21 @@ def selectAI():
 def style_change():
     return render_template('style_change.html')
 
+@app.route('/cam-test')
+def setAi():
+    return render_template('camTest.html')
+
+@app.route('/dance')
+def dance():
+    return render_template('choseDance.html')
+
+@app.route('/music')
+def music():
+    return render_template('music.html')
+
+# @app.route('/cam-est')
+# def setAi():
+#     return render_template('camTest.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
