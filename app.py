@@ -48,5 +48,9 @@ def music():
 def ranking():
     return render_template('ranking.html')
 
+@app.route('/badge')
+def badge():
+    return render_template('badge.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)

@@ -1,20 +1,90 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+      @font-face {
+        font-family: "Chopsic";
+        src: url("/fonts/Chopsic-K6Dp.ttf");
+    }
+    body {
+        margin: 0;
+        background-color: rgb(197, 197, 197);
+    }
+    #title {
+      font-family: "Chopsic";
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        margin: 5% auto;
+        width: 63%;
+        min-height: 40em;
+        height: 80vh;
+        border-radius: 30px;
+    }
+
+    h1 {
+        margin-top: 100px; 
+        margin-bottom: 50px;
+        font-size: 80px;
+        color: #000; /* 기본 텍스트 색상으로 변경 */
+    }
+
+    .enter-button {
+        padding: 15px 30px;
+        font-size: 18px;
+        text-decoration: none;
+        color: white;
+        background-color: #4285f4;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.1s ease, color 0.1s ease;
+    }
+
+    .enter-button:hover {
+        background-color: #357ae8; /* 호버 상태에서의 색상 변경 */
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center; /* 이미지 중앙 정렬 */
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .main-image {
+        max-width: 45%; /* 이미지 크기 조정 */
+        height: auto;
+        border-radius: 8px;
+        margin: 0 10px; /* 이미지 사이의 간격 조정 */
+    }
+
+    .flipped {
+        transform: scaleX(-1); /* 이미지 반전 */
+    }
+    </style>
+    <link rel="stylesheet" href="/static/styles.css">
     <title>Brain Dance</title>
-    <link rel="stylesheet" href="/static/style.css" />
-  </head>
-  <body>
-    <div id="mainPage">
-      <div id="title">
-        <img src="/static/assets/Intel_logo_2023.svg.png" width="256px">
-        <h1>Brain Dance</h1>
-        <h2>Using OpenVINO Pre-trained Model</h2><br>
-        <p>Source: <a href="https://github.com/openvinotoolkit/openvino_notebooks">https://github.com/openvinotoolkit/openvino_notebooks</a></p><br>
-        <a href="./cam-test"><button>Let's Start!</button></a>
-      </div>
+</head>
+<body>
+
+    <div class="main-container">
+        <h1 id="title">Brain Dance</h1>
+        <a href="/cam-test" class="enter-button">Enter</a>
+        <div class="image-container">
+            <img src="/static/assets/b774ecf804f930b250d7f3368f38320d_t.jpeg" alt="Left Image" id="left-img" class="main-image">
+            <img src="/static/assets/b774ecf804f930b250d7f3368f38320d_t.jpeg" alt="Right Image" id="right-img" class="main-image flipped">
+        </div>
     </div>
-  </body>
+
+</body>
 </html>
