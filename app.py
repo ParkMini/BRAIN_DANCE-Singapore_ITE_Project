@@ -44,9 +44,9 @@ def dance():
 def music():
     return render_template('music.html')
 
-# @app.route('/cam-est')
-# def setAi():
-#     return render_template('camTest.html')
+@app.route('/ranking')
+def ranking():
+    return render_template('ranking.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
