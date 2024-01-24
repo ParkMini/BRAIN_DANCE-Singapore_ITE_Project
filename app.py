@@ -27,6 +27,10 @@ def ranking():
 def badge():
     return render_template('badge.html')
 
+@app.route('/result')
+def result():
+    return render_template('result.html')
+
 @app.route('/admin')
 def admin():
     return render_template('admin.html')
@@ -34,6 +38,10 @@ def admin():
 @app.route('/addMusic')
 def addMusic():
     return render_template('addMusic.html')
+
+@app.route('/play-music')
+def playMusic():
+    return render_template('playMusic.html')
 
 
 
