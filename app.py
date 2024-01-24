@@ -27,5 +27,15 @@ def ranking():
 def badge():
     return render_template('badge.html')
 
+@app.route('/admin')
+def admin():
+    return render_template('admin.html')
+
+@app.route('/addMusic')
+def addMusic():
+    return render_template('addMusic.html')
+
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)
