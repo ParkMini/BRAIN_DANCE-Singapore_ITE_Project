@@ -43,6 +43,10 @@ def addMusic():
 def playMusic():
     return render_template('playMusic.html')
 
+@app.route('/exam-result')
+def examResult():
+    return render_template('examResult.html')
+
 
 
 if __name__ == '__main__':
