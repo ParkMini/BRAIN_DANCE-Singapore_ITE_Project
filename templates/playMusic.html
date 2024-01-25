@@ -11,12 +11,14 @@
             height: 100%;
             overflow: hidden; /* 스크롤바 제거 */
         }
+
         .video-container {
             position: relative;
             width: 100vw; /* 뷰포트 너비에 맞춤 */
             height: 100vh; /* 뷰포트 높이에 맞춤 */
             overflow: hidden; /* 비디오가 뷰포트 밖으로 나가지 않도록 함 */
         }
+
         .video-container iframe {
             width: 100%;
             height: 100%;
@@ -25,10 +27,11 @@
     </style>
 </head>
 <body>
-
-<div class="video-container">
-    <iframe src="https://www.youtube.com/embed/IozjYg1Wdd4?controls=0&amp;autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/IozjYg1Wdd4?autoplay=1&mute=1&controls=0&start=18"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
 </body>
 </html>
